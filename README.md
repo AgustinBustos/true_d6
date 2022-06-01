@@ -99,17 +99,18 @@ $$prob_{info}(x=1)=0.9$$
 
 And the 'Not Random' sequence is 0,1,0,1,0,1,0,1,0..., then the 'Resample' sequence will not be truly random: 
 
-### first
+### First
 
 Without knowing anything about the previous sequence, the probability of 'Resample' of being 1 is:
 
 $$prob_{resample}(x=1|seq={...})=prob_{info}(x=1|seq={...})*prob_{notrandom}(x=0|seq={...})+prob_{info}(x=0|seq={...})*notrandom(x=1|seq={...})$$
 
+
 $$prob_{resample}(x=1|seq={...})=0.9*0.5+0.1*0.5=0.5$$
 
 Good, it is perfectly random.
 
-### second
+### Second
 
 Lets see what happens after seeing the previous value of the sequence (equal to 1):
 
