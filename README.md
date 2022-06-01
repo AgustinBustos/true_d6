@@ -44,3 +44,34 @@ We dont know if there is some kind of pattern hidden by itself, or it is the sam
 |.|.|
 |.|.|
 
+The trick is to search for a new column in the original dataset that we know is not correlated with the 'Info' column, this is the 'Instrument' colummn; and this is the make it or break it point, because if there is any correlation, then it's not going to work (it doesn't matter if the instrument is related to the Index column):
+
+| Info          | Index| Instrument|
+| ------------- | ------------- | ------------- | 
+|1|2|29|
+|0|3|7|
+|1|0|4|
+|1|1|6|
+|0|4|23|
+|0|5|57|
+|1|6|15|
+|.|.|.|
+|.|.|.|
+|.|.|.| 
+
+
+Now we just order the 'Instrument' column, and because of the independence of the 'Instrument' with the 'Info', every pattern in the 'Info' should dissapear, with the ordering of 'Instrument' we create disorder in 'Info':
+
+| Info          | Index| Instrument|
+| ------------- | ------------- | ------------- | 
+|1|0|4|
+|1|1|6|
+|0|3|7|
+|1|6|15|
+|0|4|23|
+|1|2|29|
+|0|5|57|
+|.|.|.|
+|.|.|.|
+|.|.|.| 
+
