@@ -97,13 +97,13 @@ But now we have an entropy problem, lets suppose that even though the 'Info' seq
 
 $$prob_{info}(x=1)=0.9$$
 
-Then the 'Resample sequence will not be truly random, lets see what happens after seeing the first value of the sequence (equal to 1):
+Then the 'Resample sequence will not be truly random, lets see what happens after seeing the previous value of the sequence (equal to 1):
 
-$$prob_{resample}(x=1|seq={1})=prob_{info}(x=1|seq={1})*prob_{notrandom}(x=0|seq={1})+prob_{info}(x=0|seq={1})*notrandom(x=1|seq={1})$$
-$$prob_{resample}(x=1|seq={1})=0.9*prob_{notrandom}(x=0|seq={1})+0.1*notrandom(x=1|seq={1})$$ Because the info is truly random and it doesnt depend on the prevous sequence
+$$prob_{resample}(x=1|seq={1,...})=prob_{info}(x=1|seq={1,...})*prob_{notrandom}(x=0|seq={1,...})+prob_{info}(x=0|seq={1,...})*notrandom(x=1|seq={1,...})$$
 
+Because the info is truly random and it doesnt depend on the previous sequence:
 
-
+$$prob_{resample}(x=1|seq={1})=0.9*prob_{notrandom}(x=0|seq={1})+0.1*notrandom(x=1|seq={1})$$ 
 
 the 'Resample' will only be truly random if the probability of 'Info' of getting a 1 is: 
 
