@@ -93,15 +93,21 @@ We've got a truly random sequence ('Info'), but we want to be able to resample t
 |.|.|.|
 |.|.|.|
 
-But now we have an entropy problem, the 'Resample' will only be truly random if the probability of 'Info' of getting a 1 is: 
+But now we have an entropy problem, lets suppose that even though the 'Info' sequence is truly random, it has 0.9 prob of getting a 1:
+
+$$prob_{info}(x=1)=0.9$$
+
+Then the 'Resample sequence will not be truly random, lets see what happens after seeing the first value of the sequence (equal to 1):
+
+$$prob_{resample}(x=1|seq={1})=prob_{info}(x=1|seq={1})*prob_{notrandom}(x=0|seq={1})+prob_{info}(x=0|seq={1})*notrandom(x=1|seq={1})$$
+$$prob_{resample}(x=1|seq={1})=0.9*prob_{notrandom}(x=0|seq={1})+0.1*notrandom(x=1|seq={1})$$ Because the info is truly random and it doesnt depend on the prevous sequence
+
+
+
+
+the 'Resample' will only be truly random if the probability of 'Info' of getting a 1 is: 
 
 $$prob_{info}(x=1)=0.5$$
-
-Lets suppose that even though the 'Info' sequence is truly random, it has 0.9 prob of getting a 1:
-$$prob_{info}(x=1)=0.9$$
-Then the 'Resample sequence will not be truly random, lets see what happens after seeing the first value of the sequence (equal to 1):
-$$prob_{resample}(x=1|seq={1})=prob_{info}(x=1|seq={1})*prob_{notrandom}(x=0|seq={1})+prob_{info}(x=0|seq={1})*notrandom(x=1|seq={1})$$
-
 ### Proof: 
 
 We know the probability of 'Resample' of the next variable given the previous sequence is:
