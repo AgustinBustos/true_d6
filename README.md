@@ -75,3 +75,23 @@ Now we just order the 'Instrument' column, and because of the independence of th
 |.|.|.|
 |.|.|.| 
 
+
+## Entropy Problem
+
+We've got a truly random sequence ('Info'), but we want to be able to resample the sequence, so lets do it, we can create a new sequence called 'Not Random' and do a 'XOR' operation between 'Info' and 'Not Random' to get the new resample:
+
+| Info          | Not Random| Resample|
+| ------------- | ------------- | ------------- | 
+|1|0|1|
+|1|1|0|
+|0|0|0|
+|1|1|0|
+|0|0|0|
+|1|1|0|
+|0|0|0|
+|.|.|.|
+|.|.|.|
+|.|.|.|
+
+But now we have an entropy problem, the 'Resample' will only be truly random if the probability of 'Info' of getting a 1 is: Prob=0.5 
+<h3> proof <h3/>
