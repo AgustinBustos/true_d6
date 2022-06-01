@@ -97,14 +97,31 @@ But now we have an entropy problem, lets suppose that even though the 'Info' seq
 
 $$prob_{info}(x=1)=0.9$$
 
-Then the 'Resample sequence will not be truly random, lets see what happens after seeing the previous value of the sequence (equal to 1):
+And the 'Not Random; sequence is 0,1,0,1,0,1,0,1,0..., then the 'Resample' sequence will not be truly random:
+1) Without knowing anything about the previous sequence, the probability of 'Resample' of being 1 is:
+$$prob_{resample}(x=1|seq={...})=prob_{info}(x=1|seq={...})*prob_{notrandom}(x=0|seq={...})+prob_{info}(x=0|seq={...})*notrandom(x=1|seq={...})$$
+$$prob_{resample}(x=1|seq={...})=0.9*0.5+0.1*0.5=0.5$$
 
-$$prob_{resample}(x=1|seq={1,...})=prob_{info}(x=1|seq={1,...})*prob_{notrandom}(x=0|seq={1,...})+prob_{info}(x=0|seq={1,...})*notrandom(x=1|seq={1,...})$$
+Good, it is perfectly random.
+
+2) Lets see what happens after seeing the previous value of the sequence (equal to 1):
+
+$$prob_{resample}(x=1|seq={1,...})=prob_{info}(x=1|seq={1,...})*prob_{notrandom}(x=0|seq={1,...})+prob_{info}(x=0|seq={1,...})*prob_{notrandom}(x=1|seq={1,...})$$
 
 Because the info is truly random and it doesnt depend on the previous sequence:
 
-$$prob_{resample}(x=1|seq={1})=0.9*prob_{notrandom}(x=0|seq={1})+0.1*notrandom(x=1|seq={1})$$ 
+$$prob_{resample}(x=1|seq={1,...})=0.9*prob_{notrandom}(x=0|seq={1,...})+0.1*notrandom(x=1|seq={1,...})$$ 
+But we can infer the probability of the previous 'Not Random' value using the bayesian formula:
+$$prob_{notrandom,t-1}(x=0|seq={1,...})=(0.5*0.9)/(0.5*0.9+0.5*0.1)=0.9$$
 
+But, if the previous value is 0, then (given the pattern of not random) the next value is one, so:
+$$prob_{notrandom}(x=1|seq={1,...})=0.9$$
+So we have:
+$$prob_{resample}(x=1|seq={1,...})=0.9*0.1+0.1*0.9=0.18$$ 
+We have that the probability depends on the previous sequence, so there is a pattern.
+
+
+### The only way of not creating a pattern after the XOR combo is to usea a truly random sequence with 0.5 as prob
 the 'Resample' will only be truly random if the probability of 'Info' of getting a 1 is: 
 
 $$prob_{info}(x=1)=0.5$$
