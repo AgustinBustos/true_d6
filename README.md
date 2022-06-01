@@ -94,8 +94,12 @@ We've got a truly random sequence ('Info'), but we want to be able to resample t
 |.|.|.|
 
 But now we have an entropy problem, the 'Resample' will only be truly random if the probability of 'Info' of getting a 1 is: info_prob(x=1)=0.5 
+
+
 <h3> Proof: <h3/>
- We know the probability of 'Resample' of the next variable given the previous sequence is:
+  
+
+We know the probability of 'Resample' of the next variable given the previous sequence is:
   
 <img src="https://latex.codecogs.com/gif.latex?resample_prob(x=1|{...0,1,1,0,1})=info_prob(x=1|{...0,1,1,0,1})*notrandom_prob(x=0|{...0,1,1,0,1})+info_prob(x=0|{...0,1,1,0,1})*notrandom_prob(x=1|{...0,1,1,0,1})" /> 
   
@@ -104,4 +108,6 @@ But now we have an entropy problem, the 'Resample' will only be truly random if 
 <img src="[https://latex.codecogs.com/svg.image?prob(x=1)=5](https://latex.codecogs.com/svg.image?\bg{white}prob(x=1)=5)"/>
   
 ![equation](http://latex.codecogs.com/gif.latex?O_t%3D%5Ctext%20%7B%20Onset%20event%20at%20time%20bin%20%7D%20t)
+  
+$$info_prob(x=1)=0.5 $$
  
