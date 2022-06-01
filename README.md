@@ -99,3 +99,5 @@ But now we have an entropy problem, the 'Resample' will only be truly random if 
   
 <img src="https://latex.codecogs.com/gif.latex?resample_prob(x=1|{...0,1,1,0,1})=info_prob(x=1|{...0,1,1,0,1})*notrandom_prob(x=0|{...0,1,1,0,1})+info_prob(x=0|{...0,1,1,0,1})*notrandom_prob(x=1|{...0,1,1,0,1})" /> 
   
+ - <img src="https://latex.codecogs.com/gif.latex?O_t=\text { Onset event at time bin } t " /> 
+  
