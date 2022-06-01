@@ -29,7 +29,7 @@ This idea comes from the econometrics concept called "instrumental variable", so
 |.|
 |.|
 
-We dont know if there is some kind of pattern hidden by itself, that would be the same as saying that maybe the 'Info' column has some kind of relationship with de 'Index' column:
+We dont know if there is some kind of pattern hidden by itself, or it is the same as saying that maybe the 'Info' column has some kind of relationship with de 'Index' column:
 
 | Info          | Index|
 | ------------- | ------------- | 
