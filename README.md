@@ -97,11 +97,19 @@ But now we have an entropy problem, the 'Resample' will only be truly random if 
 
 $$prob_{info}(x=1)=0.5$$
 
+Lets suppose that even though the 'Info' sequence is truly random, it has 0.9 prob of getting a 1:
+$$prob_{info}(x=1)=0.9$$
+Then the 'Resample sequence will not be truly random, lets see what happens after seeing the first value of the sequence (equal to 1):
+$$prob_{resample}(x=1|seq={1})=prob_{info}(x=1|seq={1})*prob_{notrandom}(x=0|seq={1})+prob_{info}(x=0|seq={1})*notrandom(x=1|seq={1})$$
 
 ### Proof: 
 
 We know the probability of 'Resample' of the next variable given the previous sequence is:
   
-$$prob_{resample}(x=1|seq)=prob_{info}(x=1|seq)*prob_{notrandom}(x=0|seq)+prob_{info}(x=0|seq)*notrandom(x=1seq)$$
+$$prob_{resample}(x=1|seq)=prob_{info}(x=1|seq)*prob_{notrandom}(x=0|seq)+prob_{info}(x=0|seq)*notrandom(x=1|seq)$$
+
+But because the 'Info' is truly random, the probability doesn't depend on the previous sequence os values:
+$$prob_{info}(x=1|seq)=prob_{info}(x=1)$$
+And we as
   
  
