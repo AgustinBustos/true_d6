@@ -105,7 +105,7 @@ Without knowing anything about the previous sequence, the probability of 'Resamp
 
 $$prob_{resample}(x=1|seq={...})=prob_{info}(x=1|seq={...})*prob_{notrandom}(x=0|seq={...})+prob_{info}(x=0|seq={...})*prob_{notrandom}(x=1|seq={...})$$
 
-$$prob_{resample}(x=1|seq={...})=0.9*0.5+0.1*0.5$$
+$$ prob_{resample}(x=1|seq={...})=0.9*0.5+0.1*0.5 $$
 
 $$prob_{resample}(x=1|seq={...})=0.5$$
 
@@ -120,7 +120,7 @@ $$prob_{resample}(x=1|seq={1,...})=prob_{info}(x=1|seq={1,...})*prob_{notrandom}
 
 Because the info is truly random and it doesnt depend on the previous sequence:
 
-$$prob_{resample}(x=1|seq={1,...})=0.9*prob_{notrandom}(x=0|seq={1,...})+0.1*notrandom(x=1|seq={1,...})$$ 
+$$prob_{resample}(x=1|seq={1,...})=0.9*prob_{notrandom}(x=0|seq={1,...})+0.1*prob_{notrandom}(x=1|seq={1,...})$$ 
 
 But we can infer the probability of the previous 'Not Random' value using the bayesian formula:
 
@@ -143,7 +143,7 @@ After the XOR combo, the 'Resample' will only be truly random if the probability
 
 We know the probability of 'Resample' of the next variable given the previous sequence is:
   
-$$prob_{resample}(x=1|seq)=prob_{info}(x=1|seq)*prob_{notrandom}(x=0|seq)+prob_{info}(x=0|seq)*notrandom(x=1|seq)$$
+$$prob_{resample}(x=1|seq)=prob_{info}(x=1|seq)*prob_{notrandom}(x=0|seq)+prob_{info}(x=0|seq)*prob_{notrandom}(x=1|seq)$$
 
 But because the 'Info' is truly random, the probability doesn't depend on the previous sequence os values:
 $$prob_{info}(x=1|seq)=prob_{info}(x=1)$$
