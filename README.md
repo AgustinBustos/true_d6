@@ -103,3 +103,5 @@ But now we have an entropy problem, the 'Resample' will only be truly random if 
   
 <img src="[https://latex.codecogs.com/svg.image?prob(x=1)=5](https://latex.codecogs.com/svg.image?\bg{white}prob(x=1)=5)"/>
   
+![equation](http://latex.codecogs.com/gif.latex?O_t%3D%5Ctext%20%7B%20Onset%20event%20at%20time%20bin%20%7D%20t)
+  
