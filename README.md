@@ -15,9 +15,30 @@ The main objective is to create a random binary sequence: {1,1,1,0,0,1...}
 
 ## Instrumental Variable
 
-This idea comes from the econometrics concept called "instrumental variable", so lets say we import the world information with a column 'info' containing a dummy variable:
+This idea comes from the econometrics concept called "instrumental variable", so lets say we import the world information with a column 'Info' containing a dummy variable:
 | Info          | 
 | ------------- | 
-| 1  | 
-|0 | 
+|1| 
+|1| 
+|1|
+|0|
+|0|
+|0|
+|1|
+|.|
+|.|
+|.|
+We dont know if there is some kind of pattern hidden by itself, that would be the same as saying that maybe the 'Info' column has some kind of relationship with de 'Index' column:
+| Info          | Index|
+| ------------- | ------------- | 
+|1|0| 
+|1|1|
+|1|2|
+|0|3|
+|0|4|
+|0|5|
+|1|6|
+|.|.|
+|.|.|
+|.|.|
 
