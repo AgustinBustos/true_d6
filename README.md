@@ -101,5 +101,5 @@ But now we have an entropy problem, the 'Resample' will only be truly random if 
   
  - <img src="https://latex.codecogs.com/gif.latex?O_t=\text { Onset event at time bin } t " /> 
   
-<img src="https://latex.codecogs.com/svg.image?prob(x=1)=5"/>
+<img src="[https://latex.codecogs.com/svg.image?prob(x=1)=5](https://latex.codecogs.com/svg.image?\bg{white}prob(x=1)=5)"/>
   
