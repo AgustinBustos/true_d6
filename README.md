@@ -97,5 +97,5 @@ But now we have an entropy problem, the 'Resample' will only be truly random if 
 <h3> Proof: <h3/>
  We know the probability of 'Resample' of the next variable given the previous sequence is:
   
-  - <img src="https://latex.codecogs.com/gif.latex?resample_prob(x=1|{...0,1,1,0,1})=info_prob(x=1|{...0,1,1,0,1})*notrandom_prob(x=0|{...0,1,1,0,1})+info_prob(x=0|{...0,1,1,0,1})*notrandom_prob(x=1|{...0,1,1,0,1})" /> 
+<img src="https://latex.codecogs.com/gif.latex?resample_prob(x=1|{...0,1,1,0,1})=info_prob(x=1|{...0,1,1,0,1})*notrandom_prob(x=0|{...0,1,1,0,1})+info_prob(x=0|{...0,1,1,0,1})*notrandom_prob(x=1|{...0,1,1,0,1})" /> 
   
