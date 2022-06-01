@@ -10,9 +10,14 @@ The first one gives the main binary sequence which will generate the resampled o
 
 
 # Main Sequence Creation
-Lately i have been playing with pseudorandom generators, the "pseudo" aspect is very intriguing to me, the reason is that in order to find a truly random sequence, all i could find is some usage of radioactive material; but why not use data from the world? surely there must be some kind of true randomness in (for example) the costumer default on credit card data; and thats exactly what i'm going to use as input: https://www.kaggle.com/competitions/amex-default-prediction/data?select=train_labels.csv
+Lately i have been playing with pseudorandom generators, the "pseudo" aspect is very intriguing to me, the reason is that in order to find a truly random sequence, all i could find is some usage of radioactive material; but why not use data from the world? surely there must be some kind of true randomness in (for example) the costumer default on credit card data; and thats exactly what i'm going to use as input: https://www.kaggle.com/competitions/amex-default-prediction/data?select=train_labels.csv .
+The main objective is to create a random binary sequence: {1,1,1,0,0,1...}
 
 ## Instrumental Variable
 
-This idea comes from the econometrics concept called "instrumental variable",
+This idea comes from the econometrics concept called "instrumental variable", so lets say we import the world information with a column 'info' containing a dummy variable:
+| Info          | 
+| ------------- | 
+| 1  | 
+|0 | 
 
