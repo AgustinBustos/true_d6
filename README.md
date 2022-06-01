@@ -94,12 +94,12 @@ We've got a truly random sequence ('Info'), but we want to be able to resample t
 |.|.|.|
 
 But now we have an entropy problem, the 'Resample' will only be truly random if the probability of 'Info' of getting a 1 is: 
-<div>
+
 $$prob_{info}(x=1)=0.5$$
-<div/>
-<div>
-<h3> Proof: <h3/>
-<div/>
+
+
+### Proof: 
+
 We know the probability of 'Resample' of the next variable given the previous sequence is:
   
 $$prob_{resample}(x=1|seq)=prob_{info}(x=1|seq)*prob_{notrandom}(x=0|seq)+prob_{info}(x=0|seq)*notrandom(x=1seq)$$
