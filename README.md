@@ -117,23 +117,23 @@ Good, it is perfectly random.
 
 Lets see what happens after seeing the previous value of the sequence (equal to 1):
 
-$$prob_{res}(1|seq={1,...}) = prob_{info}(1|seq={1,...}) * prob_{notrand}(0|seq={1,...}) + prob_{info}(0|seq={1,...}) * prob_{notrand}(1|seq={1,...})$$
+$$prob_{res}(1|seq={1,..}) = prob_{info}(1|seq={1,..}) * prob_{notrand}(0|seq={1,..}) + prob_{info}(0|seq={1,..}) * prob_{notrand}(1|seq={1,..})$$
 
 Because the info is truly random and it doesnt depend on the previous sequence:
 
-$$prob_{res}(x=1|seq={1,...}) = 0.9 * prob_{notrm}(x=0|seq={1,...}) + 0.1 * prob_{notrandom}(x=1|seq={1,...})$$ 
+$$prob_{res}(x=1|seq={1,...}) = 0.9 * prob_{notrand}(x=0|seq={1,...}) + 0.1 * prob_{notrand}(x=1|seq={1,...})$$ 
 
 But we can infer the probability of the previous 'Not Random' value using the bayesian formula:
 
-$$prob_{notrandom,t-1}(x=0|seq={1,...}) = (0.5 * 0.9) / (0.5 * 0.9 + 0.5 * 0.1) = 0.9$$
+$$prob_{notrand,t-1}(x=0|seq={1,...}) = (0.5 * 0.9) / (0.5 * 0.9 + 0.5 * 0.1) = 0.9$$
 
 But, if the previous value is 0, then (given the pattern of not random) the next value is one, so:
 
-$$prob_{notrandom}(x=1|seq={1,...}) = 0.9$$
+$$prob_{notrand}(x=1|seq={1,...}) = 0.9$$
 
 So we have:
 
-$$prob_{resample}(x=1|seq={1,...}) = 0.9 * 0.1 + 0.1 * 0.9 = 0.18$$ 
+$$prob_{res}(x=1|seq={1,...}) = 0.9 * 0.1 + 0.1 * 0.9 = 0.18$$ 
 
 We have that the probability depends on the previous sequence, so there is a pattern.
 <hr/>
