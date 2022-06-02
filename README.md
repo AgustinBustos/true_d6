@@ -104,7 +104,7 @@ And the 'Not Random' sequence is 0,1,0,1,0,1,0,1,0..., then the 'Resample' seque
 
 Without knowing anything about the previous sequence, the probability of 'Resample' of being 1 is:
 
-$$prob_{res}(x=1|seq={...}) = prob_{info}(x=1|seq={...}) * prob_{notrand}(x=0|seq={...}) + prob_{info}(x=0|seq={...}) * prob_{notrand}(x=1|seq={...})$$
+$$prob_{res}(1|seq={...}) = prob_{info}(1|seq={...}) * prob_{notrand}(0|seq={...}) + prob_{info}(0|seq={...}) * prob_{notrand}(1|seq={...})$$
 
 $$prob_{res}(x=1|seq={...}) = 0.9 * 0.5 + 0.1* 0.5 = 0.5$$
 
@@ -117,7 +117,7 @@ Good, it is perfectly random.
 
 Lets see what happens after seeing the previous value of the sequence (equal to 1):
 
-$$prob_{res}(x=1|seq={1,...}) = prob_{info}(x=1|seq={1,...}) * prob_{notrand}(x=0|seq={1,...}) + prob_{info}(x=0|seq={1,...}) * prob_{notrand}(x=1|seq={1,...})$$
+$$prob_{res}(1|seq={1,...}) = prob_{info}(1|seq={1,...}) * prob_{notrand}(0|seq={1,...}) + prob_{info}(0|seq={1,...}) * prob_{notrand}(1|seq={1,...})$$
 
 Because the info is truly random and it doesnt depend on the previous sequence:
 
