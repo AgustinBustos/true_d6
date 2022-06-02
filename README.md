@@ -76,7 +76,8 @@ Now we just order the 'Instrument' column, and because of the independence of th
 |.|.|.| 
 
 <hr/>
-## Entropy Problem
+
+# Entropy Problem
 
 We've got a truly random sequence ('Info'), but we want to be able to resample the sequence, so lets do it, we can create a new sequence called 'Not Random' and do a 'XOR' operation between 'Info' and 'Not Random' to get the new resample:
 
@@ -99,7 +100,7 @@ $$prob_{info}(x=1)=0.9$$
 
 And the 'Not Random' sequence is 0,1,0,1,0,1,0,1,0..., then the 'Resample' sequence will not be truly random: 
 
-### First
+## First
 
 Without knowing anything about the previous sequence, the probability of 'Resample' of being 1 is:
 
@@ -112,7 +113,7 @@ Good, it is perfectly random.
 
 
 
-### Second
+## Second
 
 Lets see what happens after seeing the previous value of the sequence (equal to 1):
 
@@ -137,7 +138,7 @@ $$prob_{resample}(x=1|seq={1,...}) = 0.9 * 0.1 + 0.1 * 0.9 = 0.18$$
 We have that the probability depends on the previous sequence, so there is a pattern.
 
 
-### How to preserve the randomness?
+## How to preserve the randomness?
 After the XOR combo, the 'Resample' will only be truly random if the probability of 'Info' of getting a 1 is 0.5:
 ### Proof: 
 
@@ -158,12 +159,11 @@ So:
 $$prob_{resample}(x=1|seq) = 0.5 * 1 = 0.5$$
 
 We have proved that if 'Info' has max entropy, then there will not be any pattern in the XOR combo independent of the 'Not Random' sequence.
+
 <hr>
 
-## Maximizing Entropy
+# Maximizing Entropy
  
-
-
 We want to force the formula:
 $$prob_{info}(x=1) = 0.5$$ 
 
