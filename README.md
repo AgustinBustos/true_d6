@@ -75,7 +75,7 @@ Now we just order the 'Instrument' column, and because of the independence of th
 |.|.|.|
 |.|.|.| 
 
-
+<hr/>
 ## Entropy Problem
 
 We've got a truly random sequence ('Info'), but we want to be able to resample the sequence, so lets do it, we can create a new sequence called 'Not Random' and do a 'XOR' operation between 'Info' and 'Not Random' to get the new resample:
@@ -157,6 +157,46 @@ $$prob_{notrandom}(x=0|seq) + prob_{notrandom}(x=1|seq) = 1$$
 So:
 $$prob_{resample}(x=1|seq) = 0.5 * 1 = 0.5$$
 
-We have porved that if 'Info' has max entropy, then there will not be any pattern in the XOR combo independent of the 'Not Random' sequence.
-  
+We have proved that if 'Info' has max entropy, then there will not be any pattern in the XOR combo independent of the 'Not Random' sequence.
+<hr>
+
+## Maximizing Entropy
  
+
+
+We want to force the formula:
+$$prob_{info}(x=1) = 0.5$$ 
+
+To do so, we are going to cut de 'Info' column in 2 halfs ('Info1' 'Info2') and do the XOR operation:
+| Info1          | Info2| NewInfo|
+| ------------- | ------------- | ------------- | 
+|1|1|0|
+|1|0|1|
+|0|1|1|
+|1|1|0|
+|0|1|1|
+|1|0|1|
+|0|0|0|
+|.|.|.|
+|.|.|.|
+|.|.|.|
+
+The probability of 'New Info' will be:
+
+$$prob_{newinfo}(x=1|seq) = prob_{info1}(x=1|seq) * prob_{info2}(x=0|seq) + prob_{info1}(x=0|seq) * prob_{info2}(x=1|seq)$$
+
+The probs of 'Info1' and 'Info1' don't depend on the sequence:
+
+$$prob_{newinfo}(x=1) = prob_{info1}(x=1) * prob_{info2}(x=0) + prob_{info1}(x=0) * prob_{info2}(x=1)$$
+
+And are symmetrical:
+
+$$prob_{newinfo}(x=1) = 2 * prob_{info1}(x=1) * prob_{info1}(x=0)$$
+
+Also are the same as the 'Info' column:
+$$prob_{newinfo}(x=1) = 2 * prob_{info}(x=1) * prob_{info}(x=0)$$
+$$prob_{newinfo}(x=1) = 2 * prob_{info}(x=1) * (1 - prob_{info}(x=1))$$
+
+So we get a logistic map with r=2, in the sense that we will repeat this process lots of times, and so the probability will converge to 0.5; the main problem is that it will never be 0.5 exactly but we can make it as close as we want to.
+
+We have created a truly random sequence with $$prob_{newinfo}(x=1) approx 0.5$$
