@@ -104,9 +104,9 @@ And the 'Not Random' sequence is 0,1,0,1,0,1,0,1,0..., then the 'Resample' seque
 
 Without knowing anything about the previous sequence, the probability of 'Resample' of being 1 is:
 
-$$prob_{resample}(x=1|seq={...}) = prob_{info}(x=1|seq={...}) * prob_{notrandom}(x=0|seq={...}) + prob_{info}(x=0|seq={...}) * prob_{notrandom}(x=1|seq={...})$$
+$$prob_{res}(x=1|seq={...}) = prob_{info}(x=1|seq={...}) * prob_{notrand}(x=0|seq={...}) + prob_{info}(x=0|seq={...}) * prob_{notrand}(x=1|seq={...})$$
 
-$$prob_{resample}(x=1|seq={...}) = 0.9 * 0.5 + 0.1* 0.5 = 0.5$$
+$$prob_{res}(x=1|seq={...}) = 0.9 * 0.5 + 0.1* 0.5 = 0.5$$
 
 
 Good, it is perfectly random.
@@ -117,11 +117,11 @@ Good, it is perfectly random.
 
 Lets see what happens after seeing the previous value of the sequence (equal to 1):
 
-$$prob_{resample}(x=1|seq={1,...}) = prob_{info}(x=1|seq={1,...}) * prob_{notrandom}(x=0|seq={1,...}) + prob_{info}(x=0|seq={1,...}) * prob_{notrandom}(x=1|seq={1,...})$$
+$$prob_{res}(x=1|seq={1,...}) = prob_{info}(x=1|seq={1,...}) * prob_{notrand}(x=0|seq={1,...}) + prob_{info}(x=0|seq={1,...}) * prob_{notrand}(x=1|seq={1,...})$$
 
 Because the info is truly random and it doesnt depend on the previous sequence:
 
-$$prob_{resample}(x=1|seq={1,...}) = 0.9 * prob_{notrandom}(x=0|seq={1,...}) + 0.1 * prob_{notrandom}(x=1|seq={1,...})$$ 
+$$prob_{res}(x=1|seq={1,...}) = 0.9 * prob_{notrm}(x=0|seq={1,...}) + 0.1 * prob_{notrandom}(x=1|seq={1,...})$$ 
 
 But we can infer the probability of the previous 'Not Random' value using the bayesian formula:
 
