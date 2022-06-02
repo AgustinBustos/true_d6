@@ -75,7 +75,6 @@ Now we just order the 'Instrument' column, and because of the independence of th
 |.|.|.|
 |.|.|.| 
 
-<hr/>
 
 # Entropy Problem
 
@@ -160,7 +159,6 @@ $$prob_{resample}(x=1|seq) = 0.5 * 1 = 0.5$$
 
 We have proved that if 'Info' has max entropy, then there will not be any pattern in the XOR combo independent of the 'Not Random' sequence.
 
-<hr>
 
 # Maximizing Entropy
  
