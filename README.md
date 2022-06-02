@@ -75,6 +75,7 @@ Now we just order the 'Instrument' column, and because of the independence of th
 |.|.|.|
 |.|.|.| 
 
+<br><br>
 
 # Entropy Problem
 
@@ -159,6 +160,7 @@ $$prob_{resample}(x=1|seq) = 0.5 * 1 = 0.5$$
 
 We have proved that if 'Info' has max entropy, then there will not be any pattern in the XOR combo. This result holds independent of the 'Not Random' sequence patterns.
 
+<br><br>
 
 # Maximizing Entropy
  
@@ -200,6 +202,8 @@ So we get a logistic map with r=2, in the sense that we will repeat this process
 2) Every time we repeat the process of cutting and XORing, we reduce the row count by a factor of 2.
 
 We have created a truly random sequence 'Rand' with $$prob_{rand}(x=1) \approx 0.5$$
+
+<br><br>
 
 # Resampling
 
