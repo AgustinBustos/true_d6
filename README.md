@@ -221,3 +221,11 @@ To make a resampling of the sequence, we can create a new column, either not ran
 |.|.|.|
 |.|.|.|
 |.|.|.|
+
+
+<br><br>
+
+# Testing
+
+I know there are randomness tests, in the future i want to test the sequence against the NIST randomness test suite, but i need to concat more data, currently i have only 25000 rows only.
+
