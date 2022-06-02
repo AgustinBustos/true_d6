@@ -157,7 +157,7 @@ $$prob_{notrandom}(x=0|seq) + prob_{notrandom}(x=1|seq) = 1$$
 So:
 $$prob_{resample}(x=1|seq) = 0.5 * 1 = 0.5$$
 
-We have proved that if 'Info' has max entropy, then there will not be any pattern in the XOR combo independent of the 'Not Random' sequence.
+We have proved that if 'Info' has max entropy, then there will not be any pattern in the XOR combo. This result holds independent of the 'Not Random' sequence patterns.
 
 
 # Maximizing Entropy
