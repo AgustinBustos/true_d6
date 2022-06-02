@@ -103,11 +103,9 @@ And the 'Not Random' sequence is 0,1,0,1,0,1,0,1,0..., then the 'Resample' seque
 
 Without knowing anything about the previous sequence, the probability of 'Resample' of being 1 is:
 
-$$prob_{resample}(x=1|seq={...})=prob_{info}(x=1|seq={...})*prob_{notrandom}(x=0|seq={...})+prob_{info}(x=0|seq={...})*prob_{notrandom}(x=1|seq={...})$$
+$$prob_{resample}(x=1|seq={...}) = prob_{info}(x=1|seq={...}) * prob_{notrandom}(x=0|seq={...}) + prob_{info}(x=0|seq={...}) * prob_{notrandom}(x=1|seq={...})$$
 
-$$prob_{resample}(x=1|seq={...})= 0.9 * 0.5 + 0.1* 0.5 $$
-
-$$prob_{resample}(x=1|seq={...})=0.5$$
+$$prob_{resample}(x=1|seq={...}) = 0.9 * 0.5 + 0.1* 0.5 = 0.5$$
 
 
 Good, it is perfectly random.
@@ -118,23 +116,23 @@ Good, it is perfectly random.
 
 Lets see what happens after seeing the previous value of the sequence (equal to 1):
 
-$$prob_{resample}(x=1|seq={1,...})=prob_{info}(x=1|seq={1,...})*prob_{notrandom}(x=0|seq={1,...})+prob_{info}(x=0|seq={1,...})*prob_{notrandom}(x=1|seq={1,...})$$
+$$prob_{resample}(x=1|seq={1,...}) = prob_{info}(x=1|seq={1,...}) * prob_{notrandom}(x=0|seq={1,...}) + prob_{info}(x=0|seq={1,...}) * prob_{notrandom}(x=1|seq={1,...})$$
 
 Because the info is truly random and it doesnt depend on the previous sequence:
 
-$$prob_{resample}(x=1|seq={1,...})=0.9*prob_{notrandom}(x=0|seq={1,...})+0.1*prob_{notrandom}(x=1|seq={1,...})$$ 
+$$prob_{resample}(x=1|seq={1,...}) = 0.9 * prob_{notrandom}(x=0|seq={1,...}) + 0.1 * prob_{notrandom}(x=1|seq={1,...})$$ 
 
 But we can infer the probability of the previous 'Not Random' value using the bayesian formula:
 
-$$prob_{notrandom,t-1}(x=0|seq={1,...})=(0.5*0.9)/(0.5*0.9+0.5*0.1)=0.9$$
+$$prob_{notrandom,t-1}(x=0|seq={1,...}) = (0.5 * 0.9) / (0.5 * 0.9 + 0.5 * 0.1) = 0.9$$
 
 But, if the previous value is 0, then (given the pattern of not random) the next value is one, so:
 
-$$prob_{notrandom}(x=1|seq={1,...})=0.9$$
+$$prob_{notrandom}(x=1|seq={1,...}) = 0.9$$
 
 So we have:
 
-$$prob_{resample}(x=1|seq={1,...})=0.9*0.1+0.1*0.9=0.18$$ 
+$$prob_{resample}(x=1|seq={1,...}) = 0.9 * 0.1 + 0.1 * 0.9 = 0.18$$ 
 
 We have that the probability depends on the previous sequence, so there is a pattern.
 
@@ -145,10 +143,20 @@ After the XOR combo, the 'Resample' will only be truly random if the probability
 
 We know the probability of 'Resample' of the next variable given the previous sequence is:
   
-$$prob_{resample}(x=1|seq)=prob_{info}(x=1|seq)*prob_{notrandom}(x=0|seq)+prob_{info}(x=0|seq)*prob_{notrandom}(x=1|seq)$$
+$$prob_{resample}(x=1|seq) = prob_{info}(x=1|seq) * prob_{notrandom}(x=0|seq) + prob_{info}(x=0|seq) * prob_{notrandom}(x=1|seq)$$
 
-But because the 'Info' is truly random, the probability doesn't depend on the previous sequence os values:
-$$prob_{info}(x=1|seq)=prob_{info}(x=1)$$
-And we as
+But because the 'Info' is truly random, the probability doesn't depend on the previous sequence of values:
+$$prob_{info}(x=1|seq) = prob_{info}(x=1)$$
+And we also know that 'Info' has max entropy:
+$$prob_{info}(x=1|seq) = prob_{info}(x=1) = 0.5$$
+Then the 'Resample' prob is:
+$$prob_{resample}(x=1|seq) = 0.5 * prob_{notrandom}(x=0|seq) + 0.5 * prob_{notrandom}(x=1|seq)$$
+$$prob_{resample}(x=1|seq) = 0.5 * (prob_{notrandom}(x=0|seq) + prob_{notrandom}(x=1|seq))$$
+But, thanks to the rules of probability:
+$$prob_{notrandom}(x=0|seq) + prob_{notrandom}(x=1|seq) = 1$$
+So:
+$$prob_{resample}(x=1|seq) = 0.5 * 1 = 0.5$$
+
+We have porved that if 'Info' has max entropy, then there will not be any pattern in the XOR combo independent of the 'Not Random' sequence.
   
  
