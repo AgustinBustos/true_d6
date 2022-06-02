@@ -199,4 +199,20 @@ So we get a logistic map with r=2, in the sense that we will repeat this process
 1) It will never be 0.5 exactly but we can make it as close as we want to.
 2) Every time we repeat the process of cutting and XORing, we reduce the row count by a factor of 2.
 
-We have created a truly random sequence with $$prob_{newinfo}(x=1) \approx 0.5$$
+We have created a truly random sequence 'Rand' with $$prob_{rand}(x=1) \approx 0.5$$
+
+# Resampling
+
+To make a resampling of the sequence, we can create a new column, either not random or pseudo random and do the XOR operation:
+| Rand          | PseudoRand| Resample|
+| ------------- | ------------- | ------------- | 
+|0|1|1|
+|0|0|0|
+|0|1|1|
+|1|0|1|
+|0|0|0|
+|1|0|1|
+|0|0|0|
+|.|.|.|
+|.|.|.|
+|.|.|.|
