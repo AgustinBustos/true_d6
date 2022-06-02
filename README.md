@@ -195,6 +195,8 @@ Also are the same as the 'Info' column:
 $$prob_{newinfo}(x=1) = 2 * prob_{info}(x=1) * prob_{info}(x=0)$$
 $$prob_{newinfo}(x=1) = 2 * prob_{info}(x=1) * (1 - prob_{info}(x=1))$$
 
-So we get a logistic map with r=2, in the sense that we will repeat this process lots of times, and so the probability will converge to 0.5; the main problem is that it will never be 0.5 exactly but we can make it as close as we want to.
+So we get a logistic map with r=2, in the sense that we will repeat this process lots of times, and so the probability will converge to 0.5; there are two problems:
+1) It will never be 0.5 exactly but we can make it as close as we want to.
+2) Every time we repeat the process of cutting and XORing, we reduce the row count by a factor of 2.
 
 We have created a truly random sequence with $$prob_{newinfo}(x=1) approx 0.5$$
