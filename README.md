@@ -100,7 +100,7 @@ $$prob_{info}(x=1)=0.9$$
 
 And the 'Not Random' sequence is 0,1,0,1,0,1,0,1,0..., then the 'Resample' sequence will not be truly random: 
 
-### First
+### First:
 
 Without knowing anything about the previous sequence, the probability of 'Resample' of being 1 is:
 
@@ -113,7 +113,7 @@ Good, it is perfectly random.
 
 <hr/>
 
-### Second
+### Second:
 
 Lets see what happens after seeing the previous value of the sequence (equal to 1):
 
